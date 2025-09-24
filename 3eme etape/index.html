@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TP-js</title>
+    <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+    <nav id="display-menu">
+        <ul style="list-style-type:none;">
+            <li><input type="checkbox" name="checkbox1" id="checkbox1" onclick="myFunction1()"><label>Lien et images</label></li>
+            <li><input type="checkbox" name="checkbox2" id="checkbox2" onclick="myFunction2()"><label>Des éléménts</label></li>
+            <li><input type="checkbox" name="checkbox3" id="checkbox3" onclick="myFunction3()"><label>Barre de progression</label></li>
+        </ul>
+    </nav>
+    <section id="image">
+        <h1>Lien et images</h1>
+        <a href="https://www.wikipedia.org/" target="_blank">La page principale de Wikipedia</a>
+        <br>
+        <img src="./360_F_399986042_9iSLYUNyDv8npaKP.png" alt="google">
+        <br>
+    </section>
+    <section id="formSection">
+        <hr>
+        <form action="form">
+            <h1>Des éléménts !</h1>
+            <input type="text" name="text" id="text">
+            <br>
+            <br>
+            <input type="radio" name="radio1" id="radio1"><span>choix 1</span>
+            <input type="radio" name="radio2" id="radio2" checked><span>choix 2</span>
+            <input type="radio" name="radio3" id="radio3"><span>choix 3</span>
+            <br>
+            <br>
+            <input type="password" name="password" id="^password">
+            <br>
+            <input type="range" name="range" id="range"> Volume
+            <br>
+            <span id="VLevel">0</span>
+            <br>
+            <label for="ouinon">case à cocher</label><input type="checkbox" name="checkbox" id="checkbox">
+            <p>
+                Date : <input type="date" name="date" id="date">
+            </p>
+            <button id="myButton">OK</button>
+        </form>
+        <hr>
+    </section>
+    <section id ="progressSection">
+        <h1>Barre de progression</h1>
+        Téléchargement en cours :
+        <progress value="32" max="100"></progress>
+        <br>
+        <p>
+            Espace disponible :
+            <progress value="70" max="100" class="space"></progress>
+        </p>
+    </section>
+    <script src="./script.js"></script>
+</body>
+</html>

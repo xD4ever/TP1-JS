@@ -1,0 +1,23 @@
+img{
+  width: 200px;
+}
+
+a{
+  text-decoration: none;
+  color: black;
+}
+
+.space {
+  width: 100px;
+  height: 10px;
+  appearance: none;
+}
+
+.space::-webkit-progress-bar {
+  background-color: #eee;
+  border-radius: 8px;
+}
+.space::-webkit-progress-value {
+  background-color: rgb(40, 149, 44);
+  border-radius: 8px;
+}
