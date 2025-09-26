@@ -124,6 +124,7 @@ document.addEventListener("DOMContentLoaded", function() {
         console.log("Année choisie :", year);
     });
 
+    //================ Progress Bars ===================
     let value1 = 0;
     let value2 = 0;
 
@@ -148,4 +149,20 @@ document.addEventListener("DOMContentLoaded", function() {
         p2.value = value2;
         if (value2 >= 100) clearInterval(timer2);
     }, intervalMs);
+
+    //================ Vérification du champ texte ===================
+    const button = document.getElementById("myButton");
+    const textInput = document.getElementById("text");
+
+    button.addEventListener("click", function(event) {
+        event.preventDefault(); // empêche le formulaire de s'envoyer
+
+        const value = textInput.value.trim(); // valeur sans espaces avant/après
+
+        if (value === "Oui" || value === "Non") {
+            console.log("Valeur correcte :", value);
+        } else {
+            textInput.value = "Il faut mettre Oui ou Non";
+        }
+    });
 });
