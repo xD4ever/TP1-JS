@@ -93,4 +93,35 @@ document.addEventListener("DOMContentLoaded", function() {
     img.src = 'https://upload.wikimedia.org/wikipedia/commons/b/bd/UPHF_logo.svg';
     const section = document.querySelector('section');
     section.appendChild(img);
+
+    const input = document.getElementById("date");
+
+    input.addEventListener("change", function() {
+        const dateValue = this.value;
+        const year = new Date(dateValue).getFullYear();
+        console.log("Année choisie :", year);
+    });
+
+    let value1 = 0;
+    let value2 = 0;
+
+    const p1 = document.getElementById('progress');
+    const p2 = document.getElementById('space');
+
+    const step = 5;          // +5% each second
+    const intervalMs = 1000; // 1 second
+
+    const timer1 = setInterval(() => {
+        value1 += step;
+        if (value1 > 100) value1 = 100;
+        p1.value = value1;
+        if (value1 >= 100) clearInterval(timer1);
+    }, intervalMs);
+
+    const timer2 = setInterval(() => {
+        value2 += step;
+        if (value2 > 100) value2 = 100;
+        p2.value = value2;
+        if (value2 >= 100) clearInterval(timer2);
+    }, intervalMs);
 });
